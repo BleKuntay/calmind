@@ -196,3 +196,28 @@
 .see-details-btn:focus {
     color: white;
 }
+
+.navbar {
+    position: relative;
+    font-size: 22px;
+}
+
+.navbar-button {
+    color: white;
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 300ms;
+}
+
+.navbar:hover::before,
+.navbar.active::before {
+    width: 100%;
+}

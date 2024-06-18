@@ -6,10 +6,16 @@ const Navbar = ()  => {
         <NavLink to='/'>
           <h3 className="text-white font-bold text-[25px]">CALMIND</h3>
         </NavLink>
-        <nav>
-          <NavLink to='/talk-mind'> <button className="navbar-btn rounded-[1.5rem] mx-[40px] text-[1.5rem]">Talk Mind</button></NavLink>
-          <NavLink to='/motivation'> <button className="navbar-btn rounded-[1.5rem] mx-[40px] text-[1.5rem]">Motivation</button></NavLink>
-          <NavLink to='/talk-therapy'> <button className="navbar-btn rounded-[1.5rem] mx-[40px] text-[1.5rem]">Talk Therapy</button></NavLink>
+        <nav className=''>
+          <NavLink to='/talk-mind' className={({ isActive }) => isActive ? "navbar mx-5 active" : "navbar mx-5"}>
+            <button className="navbar-button">Talk Mind</button>
+          </NavLink>
+          <NavLink to='/motivation' className={({ isActive }) => isActive ? "navbar mx-5 active" : "navbar mx-5"}>
+            <button className="navbar-button">Motivation</button>
+          </NavLink>
+          <NavLink to='/talk-therapy' className={({ isActive }) => isActive ? "navbar mx-5 active" : "navbar mx-5"}>
+            <button className="navbar-button">Talk Therapy</button>
+          </NavLink>
         </nav>
         <button className="navbar-btn rounded-lg w-[75px] h-[41px] center hover:bg-gray-900">
           <img src="src\assets\sun.png" alt="" className="w-[60%] bg-transparent"/>
