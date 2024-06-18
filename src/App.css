@@ -141,3 +141,58 @@
 .features-bg {
     background-color: rgba(17, 138, 178, .15);
 }
+
+.btn-border {
+    border: 2px solid #118AB2;
+}
+
+.btn-hover:hover {
+    transition: 1000ms;
+    padding: 10px 50px;
+    transform: translateY(-0px);
+    background-color: #FFFFFF;
+    color: #118AB2;
+    border: 2px solid #118AB2;
+}
+
+.btn {
+    width: 10rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: inherit;
+    color: #118AB2;
+    border: 2px solid #118AB2 ; 
+    outline: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.see-details-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #118AB2;
+
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+    transform-origin: left;
+}
+
+.see-details-btn:hover::before,
+.see-details-btn:focus::before {
+    transform: scaleX(1);
+}
+
+.see-details-btn {
+    transition: color 300ms ease-in-out;
+    z-index: 1;
+}
+
+.see-details-btn:hover,
+.see-details-btn:focus {
+    color: white;
+}

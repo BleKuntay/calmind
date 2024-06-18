@@ -1,15 +1,25 @@
 import Therapist from "./Therapist"
 
 const TherapistList = () => {
+    let doctors = [
+        {id: 1, doctor_url: "src/assets/doctor-1.jpg", name: "Jane Smith", rate: "4.9", description: "Experienced therapist specializing in cognitive behavioral therapy."},
+        {id: 2, doctor_url: "src/assets/doctor-2.jpg", name: "Emily Clark", rate: "5", description: "Expert in family therapy and relationship counseling."},
+        {id: 3, doctor_url: "src/assets/doctor-3.jpg", name: "John Doe", rate: "4.8", description: "Specializes in stress management and mindfulness techniques."}
+    ]
+
     return (
-        <div className="therapist-list -">
-            <h1 className="text-white justify-center text-[48px] font-bold text-center">Therapist List</h1>
-            <Therapist name="John Doe"/>
-            <Therapist name="Jane Smith"/>
-            <Therapist name="Alex Brown"/>
-            <Therapist name="Mark Lee"/>
-            <div className="relative h-auto pb-3 mb-3">
-                <button className="mb-3 absolute left-[37.5%] w-[290px] chat-btn bg-white font-semibold text-xl">Show More</button>
+        <div className="therapist-list flex flex-col items-center">
+            <h1 className=" text-white justify-center text-[48px] font-bold text-center mb-5">Our Therapist</h1>
+            <div className="flex flex-row gap-10">
+                {doctors.map((doctor) => (
+                    <Therapist
+                        key={doctor.id}
+                        doctor_url={doctor.doctor_url}
+                        name={doctor.name}
+                        rate={doctor.rate}
+                        description={doctor.description}
+                    />
+                ))}
             </div>
         </div>
     )

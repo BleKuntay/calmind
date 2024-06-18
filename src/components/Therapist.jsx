@@ -1,14 +1,20 @@
 /* eslint-disable react/prop-types */
 const Therapist = (props) => {
     return(
-			<div className='therapist-card w-[95%%] h-[172px] bg-[#1E1E1E] '>
-				<img src="src\assets\user.png" alt="" className='h-[125px] bg-transparent mx-20'/>
-				<div className="bg-transparent">
-					<h5 className="text-white bg-transparent text-xl font-bold">dr. {props.name}</h5>
-					<img src="src\assets\star.png" alt=""className="w-[2rem] bg-transparent py-3 mx-3"/>
-					<button className="w-[77px] chat-btn bg-white font-semibold">Chat</button>
-				</div>
+		<div className="h-screen">
+		<div className="flex flex-col items-center w-[400px] p-7 bg-white text-black">
+			<img src={props.doctor_url} alt="" className="w-[100%] bg-inherits mb-5" />
+			<h2 className="bg-inherit text-[30px] font-semibold">Dr. {props.name}</h2>
+			<div className="bg-inherit flex flex-row justify-center gap-1">
+				<img src="src\assets\star.svg" alt="" className="bg-inherit w-6" />
+				<p className="bg-inherit">{props.rate}/5</p>
 			</div>
+			<p className="bg-inherit w-[90%] text-center mt-5">{props.description}</p>
+			<button className="w-28 py-1 mt-5 text-[#118AB2] text-center btn-border rounded-3xl hover:bg-[#118AB2] hover:text-white transition-colors duration-300">
+				Chat Now
+			</button>
+		</div>
+		</div>
     )
 }
 

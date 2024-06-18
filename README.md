@@ -11,3 +11,4 @@ Currently, two official plugins are available:
 # Dependency
 - Tailwind
 - react-router-dom
+- npm install react-slick slick-carousel
